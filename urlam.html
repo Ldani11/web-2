@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <title>Home</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #c0cabe;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: rgb(255, 0, 0);
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.right {
+  background-color: #ffffff;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+img{
+  width: 350px; ;
+  height: 500px; ;
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#2ffe00;" bgcolor="grey">
+
+<div >
+  <h1></h1>
+
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="index.html">HOME</a>
+    <a href="keplin.html">Kedven hobbim</a>
+    <a href="lista.html">Lista</a>
+    <a href="orarend.html">Órarend</a>
+    <a href="urlam.html">Pizza rendelés</a>
+    <a href="evszak.html">Évszakok</a>
+  </div>
+
+  <div class="main">
+    
+    <div class="content">
+    
+        <form name="rendeles">
+            <h1 (0, 0, 0);">Pizza Rendelés</h1>
+            <fieldset>
+                <legend>Vevő adatai:</legend>
+                <p><label>Név: <input type="text" name="nev">
+                        <small>Vezetéknév </small></label></p>
+                 <p><label>Név: <input type="text" name="nev">
+                        <small>Keresztnév </small></label></p>
+                <p><label>Telefon Szám: <input type="tel" name="telefon" size="10"></label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Pizza mérete</legend>
+                <p><label><input type="radio" name="meret" value="kicsi">kicsi (25cm)</label></p>
+                <p><label><input type="radio" name="meret" value="közepes">közepes (32cm)</label></p>
+                <p><label><input type="radio" name="meret" value="nagy">nagy (50cm)</label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Pizzak</legend>
+                <p><label><input type="checkbox" name="feltet1" value="Margarita">Margarita</label></p>
+                <p><label><input type="checkbox" name="feltet2" value="Hawaii">Hawaii</label></p>
+                <p><label><input type="checkbox" name="feltet3" value="Piedone kedvence">Piedone kedvence</label></p>
+                <p><label><input type="checkbox" name="feltet4" value="Prosiutto">Prosiutto</label></p>
+                <p><label><input type="checkbox" name="feltet5" value="Négysajtos">Négysajtos</label></p>
+                <p><label><input type="checkbox" name="feltet6" value="Magyaros">Magyaros</label></p>
+                <p><label><input type="checkbox" name="feltet7" value="Salami">Salami</label></p>
+                <p><label><input type="checkbox" name="feltet8" value="Mexikói">Mexikói</label></p>
+                <p><label><input type="checkbox" name="feltet9" value="Füstös">Füstös</label></p>
+                <p><label><input type="checkbox" name="feltet10" value="Songoku">Songoku</label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Italok</legend>
+                <p><lable><input type="checkbox" name="soda1" value="Pepsi Cola">Pepsi Cola</lable></p>
+                <p><lable><input type="checkbox" name="soda2" value="CocaCola">Coca Cola</lable></p>
+                <p><lable><input type="checkbox" name="soda3" value="Sprite">Sprite</lable></p>
+                <p><lable><input type="checkbox" name="soda4" value="7UP">7UP</lable></p>
+                <p><lable><input type="checkbox" name="soda5" value="Mirinda">Mirinda (narancs)</lable></p>
+                <p><lable><input type="checkbox" name="soda6" value="Mountain Dew">Mountain Dew</lable></p>
+                <p><lable><input type="checkbox" name="soda7" value="Szénsavmentes ásványvíz">Szénsavmentes ásványvíz</lable></p>
+                <p><lable><input type="checkbox" name="soda8" value="Szénsavas ásványvíz">Szénsavas ásványvíz</lable></p>
+                <p><lable><input type="checkbox" name="soda9" value="Cappy">Cappy (körte,őszibarack,alma,erdei gyümőlcs)</lable></p>
+                <p><lable><input type="checkbox" name="soda10" value="Lipton">Lipton Ice tea (citrom,barack) 1,5 L</lable></p>
+            </fieldset>
+            <fieldset>
+                <legend>Összegség</legend>
+                <p><label>mennyiség: <input type="number" name="mennyiseg"> db</label></p>
+                <p><label>egyéb kívánságok: <textarea name="egyeb"></textarea></label></p>
+                <p><label>Kért szállítási idő: <input type="time" name="kiszallitas"></label></p>
+                <p><label>Szállítás Helye: <input type="egyeb"></label></p>
+                <br>
+                <input type="reset" name="visszaallitas">
+                <input type="submit" name="kuldes">
+            </fieldset>
+        </form>
+    </div>
+
+    <div>
+        <footer>
+          <h3><p>Laczkó Dániel sulis email címe:<br>
+          <a href="mailto: laczkod@kkszki.hu">laczkod@kkszki.hu</a></p></h3>
+        </footer>
+      </div>
