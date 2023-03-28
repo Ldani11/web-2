@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitagorasz</title>
+    <style>
+        #hsz{
+            border-top: 200px solid transparent ;
+            border-left: 100px solid rgb(64, 255, 0) ; 
+        }
+    </style>
+</head>
+<body>
+
+    <div style="overflow:auto">
+        <div class="menu">
+          <a href="evszak.html">home</a>
+          <a href="index.html">Kép+Link</a>
+          <a href="keplin.html">Évszakok</a>
+          <a href="orarend.html">Órarend</a>
+          <a href="urlam.html">Űrlap</a>     
+    </div>
+
+
+
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        .menu {
+          float: left;
+          width: 20%;
+          text-align: center;
+        }
+        
+        .menu a {
+          background-color: #c0cabe;
+          padding: 8px;
+          margin-top: 7px;
+          display: block;
+          width: 100%;
+          color: rgb(255, 0, 0);
+        }
+        
+        .main {
+          float: left;
+          width: 60%;
+          padding: 0 20px;
+        }
+        
+        .right {
+          background-color: #ffffff;
+          float: left;
+          width: 20%;
+          padding: 15px;
+          margin-top: 7px;
+          text-align: center;
+        }
+        
+        @media only screen and (max-width: 620px) {
+          /* For mobile phones: */
+          .menu, .main, .right {
+            width: 100%;
+          }
+        }
+        img{
+          width: 800px; ;
+          height: 550px; ;
+        }
+        </style>
+
+ <h1>Derékszögű Háromszög rajzolása</h1>
+ <form action="javascript:void(0)">
+    <fieldset style="width: 50%;">
+    <legend> Adj meg legalább két oldalt!</legend>
+    <label id="aLabel">Side A:</label><br><input type="number" id="a"  oninput="rajzol()" ><br><br>
+    <label id="bLabel">Side B:</label><br><input type="number" id="b" oninput="rajzol()"><br><br>
+    <button type="button" id="submitButton">Betőltés</button><br> <button type="reset" id="resetButton"> Visszaállítás</button>
+    <label id="cLabel"></label><br>
+    </form>
+    <div id="hsz" ></div>
+
+
+ </style>
+</head>
+<body>
+ <script>
+    function rajzol() {
+        const haromsz = document.getElementById('hsz')
+        haromsz.style = "border-top:" + a.value + "px solid transparent;"
+        + "border-left:" + b.value + "px solid blue;"
+        document.getElementById("submitButton").onclick = function(){
+
+a = document.getElementById("a").value;
+a = Number(a);
+
+b = document.getElementById("b").value;
+b = Number(b);
+
+c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+document.getElementById("cLabel").innerHTML = "Side C: " + c;
+}
+    }
+ </script>
+</body>
+</html>
